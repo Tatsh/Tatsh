@@ -1,9 +1,6 @@
 name: Metrics
 on:
-  push: {branches: ["master"]}
   schedule: [{cron: "* 12 * * *"}]
-  workflow_call:
-  workflow_dispatch:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
