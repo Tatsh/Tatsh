@@ -19,5 +19,6 @@
 /docs/_build/
 /man/_static/
 __pycache__/
+github-metrics.svg
 htmlcov/
 node_modules/
