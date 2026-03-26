@@ -1,4 +1,6 @@
 {
+  want_cursor: false,
+  want_claude: false,
   want_codeql: false,
   want_tests: false,
   project_type: 'other',

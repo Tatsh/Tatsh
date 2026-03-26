@@ -13,7 +13,7 @@ jsonnet
 jsonschema
 largeable
 libera
-libjsonnet
+libsonnet
 lowlighter
 nowrap
 rect
@@ -28,3 +28,4 @@ udvare
 wiswa
 xchain
 xlink
+yarnrc
