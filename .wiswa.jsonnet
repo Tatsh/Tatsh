@@ -1,4 +1,6 @@
 {
+  want_cursor: false,
+  want_claude: false,
   want_codeql: false,
   want_tests: false,
   project_type: 'other',
@@ -12,9 +14,9 @@
   },
   package_json+: {
     scripts: {
-      'check-formatting': "yarn prettier -c . && yarn markdownlint-cli2",
-      'check-spelling': "yarn cspell --no-progress './**/*'  './**/.*'",
-      format: "prettier -w . && yarn markdownlint-cli2 --fix",
+      'check-formatting': "prettier -c . && markdownlint-cli2  --config package.json --configPointer /markdownlint-cli2",
+      'check-spelling': "cspell --no-progress './**/*'  './**/.*'",
+      format: "prettier -w . && markdownlint-cli2  --config package.json --configPointer /markdownlint-cli2 --fix",
       qa: 'yarn check-spelling && yarn check-formatting',
     },
   },
