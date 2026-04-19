@@ -1,4 +1,5 @@
 {
+  uses_user_defaults: true,
   want_cursor: false,
   want_claude: false,
   want_codeql: false,
@@ -9,9 +10,6 @@
   description: 'Profile project.',
   keywords: ['github', 'profile', 'tatsh'],
   want_main: false,
-  copilot+: {
-    intro: 'This repository is a profile project. The contents of README.md are displayed on the GitHub profile page. index.html redirects to the GitHub profile site.',
-  },
   package_json+: {
     scripts: {
       'check-formatting': "prettier -c . && markdownlint-cli2  --config package.json --configPointer /markdownlint-cli2",
