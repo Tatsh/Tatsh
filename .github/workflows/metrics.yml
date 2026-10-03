@@ -9,13 +9,11 @@ jobs:
         with:
           base: header, activity, community, repositories, metadata
           clean_workflows: failure, startup_failure, cancelled
-          committer_message: 🥳 Welcome aboard, deploy completed.
-          committer_token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: America/New_York
           delay: 1
           filename: github-metrics.svg
-          output_action: commit
-          output_condition: data-changed
+          # The action commits the SVG without a trailing newline; the steps below commit it.
+          output_action: none
           plugin_achievements: 'no'
           plugin_followup: 'yes'
           plugin_habits: 'yes'
@@ -37,6 +35,21 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           use_prebuilt_image: 'yes'
           user: Tatsh
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Commit metrics with a trailing newline
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          cp /metrics_renders/github-metrics.svg github-metrics.svg
+          [ -n "$(tail -c 1 github-metrics.svg)" ] && echo >> github-metrics.svg
+          git diff --quiet -- github-metrics.svg && exit 0
+          git config user.name Tatsh
+          git config user.email 724848+Tatsh@users.noreply.github.com
+          git commit -m '🥳 Welcome aboard, deploy completed.' -- github-metrics.svg
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${REPO}" HEAD
 name: Metrics
 'on':
   schedule: [{ cron: '* 12 * * *' }]
