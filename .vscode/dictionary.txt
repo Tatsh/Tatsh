@@ -1,7 +1,6 @@
 bsky
 color
 colors
-cooldown
 coveragerc
 dasharray
 dashcam
@@ -21,8 +20,9 @@ libsonnet
 lowlighter
 mktemp
 mypy
+noone
 nowrap
-npmjs
+numpydoc
 oneline
 preapproved
 pyinstaller
@@ -48,9 +48,9 @@ vendored
 venv
 winget
 wiswa
-worktree
+wiswa's
 xchain
 xlink
 yarnrc
 zizmor
-ångström
+Ångström
