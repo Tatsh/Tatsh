@@ -57,5 +57,5 @@ jobs:
           git push "https://x-access-token:${GH_TOKEN}@github.com/${REPO}" HEAD
 name: Metrics
 'on':
-  schedule: [{ cron: '* 12 * * *' }]
+  schedule: [{ cron: '0 12 * * *' }]
 permissions: {}
