@@ -2,7 +2,14 @@
   uses_user_defaults: true,
   want_cursor: false,
   want_claude: false,
-  want_codeql: false,
+  want_codeql: true,
+  github+: {
+    codeql+: {
+      languages: ['actions'],
+      runs_on: 'ubuntu-latest',
+      workflow_file: 'codeql.yml',
+    },
+  },
   want_tests: false,
   project_type: 'other',
   project_name: 'Tatsh',
