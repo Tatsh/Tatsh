@@ -5,6 +5,7 @@
 [![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Tatsh/Tatsh)](https://github.com/Tatsh/Tatsh/tags)
 [![License](https://img.shields.io/github/license/Tatsh/Tatsh)](https://github.com/Tatsh/Tatsh/blob/master/LICENSE.txt)
 [![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/Tatsh/Tatsh/v0.0.0/master)](https://github.com/Tatsh/Tatsh/compare/v0.0.0...master)
+[![CodeQL](https://github.com/Tatsh/Tatsh/actions/workflows/codeql.yml/badge.svg)](https://github.com/Tatsh/Tatsh/actions/workflows/codeql.yml)
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-blue?logo=dependabot)](https://github.com/dependabot)
 [![pages-build-deployment](https://github.com/Tatsh/Tatsh/actions/workflows/pages/pages-build-deployment/badge.svg)](https://tatsh.github.io/Tatsh/)
 [![Stargazers](https://img.shields.io/github/stars/Tatsh/Tatsh?logo=github&style=flat)](https://github.com/Tatsh/Tatsh/stargazers)
